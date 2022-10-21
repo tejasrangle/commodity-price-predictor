@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Car</title>
+</head>
+
+<body style="background-color: #D6EAF8 ; text-align:center;">
+    <header></header>
+    <main>
+        <section>
+            <div style="font-size:170%;">
+                <h1>CAR PRICE PREDICTION</h1>
+            </div>
+
+            <form action="/action_car" method="post">
+
+                <label><b>Select Company:</b></label><br><br>
+                <select name="company" id="company" required="1">
+                    {% for company in companies%}
+                    <option value="{{company}}">{{company}}</option>
+                    {% endfor %}
+                </select><br><br><br>
+
+                <label><b>Select Car Model:</b></label><br><br>
+                <select name="car_model" id="car_model" required="1">
+                    {% for car_model in car_models%}
+                    <option value="{{car_model}}">{{car_model}}</option>
+                    {% endfor %}
+                </select><br><br><br>
+
+                <label><b>Select The Year of Car Purchased:</b></label><br><br>
+                <select name="car_year" id="car_year" required="1">
+                    {% for year in year%}
+                    <option value="{{year}}">{{year}}</option>
+                    {% endfor %}
+                </select><br><br><br>
+
+                <label><b>Select Fuel Type:</b></label><br><br>
+                <select name="fuel_type" id="fuel_type" required="1">
+                    {% for fu_type in fuel_type%}
+                    <option value="{{fu_type}}">{{fu_type}}</option>
+                    {% endfor %}
+                </select><br><br><br>
+
+                <label><b>Enter Kilometers Driven:</b></label><br><br>
+                <input type="text" id="Kilometer" name="Kilometer"><br><br><br>
+
+                <input type="submit" value="Submit"><br>
+            </form>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
